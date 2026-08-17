@@ -3,7 +3,7 @@
 ========================= */
 
 main {
-    background: #f8f4ef;
+    background: #f8f4ee;
     color: #543b37;
 }
 
@@ -14,29 +14,30 @@ main {
 
 .gallery-hero {
     text-align: center;
-    padding: 90px 20px 75px;
-    background: #eadcb0;
+    padding: 65px 20px 55px;
+    background: #f8f4ee;
 }
 
 .section-label {
     color: #a76538;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 3px;
-    margin-bottom: 15px;
+    margin: 0 0 12px;
 }
 
 .gallery-hero h1 {
     color: #6b2f16;
-    font-size: 4rem;
-    margin: 0 0 20px;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0 0 18px;
 }
 
-.gallery-hero>p:last-child {
+.gallery-hero > p:last-child {
     max-width: 650px;
     margin: 0 auto;
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1.05rem;
+    line-height: 1.6;
     color: #5f5149;
 }
 
@@ -46,17 +47,18 @@ main {
 ========================= */
 
 .gallery-section {
-    padding: 85px 7%;
+    padding: 65px 7%;
+    background: #fffaf5;
 }
 
 .gallery-heading {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .gallery-heading h2 {
     color: #543b37;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin: 0;
 }
 
@@ -81,11 +83,12 @@ main {
 
 .gallery-item {
     position: relative;
-    height: 320px;
+    height: 300px;
     overflow: hidden;
     border-radius: 16px;
-    background: #ffffff;
-    box-shadow: 0 8px 25px rgba(84, 59, 55, 0.1);
+    background: white;
+    border: 1px solid #eadfd6;
+    box-shadow: 0 6px 20px rgba(84, 59, 55, 0.08);
 }
 
 .gallery-item img {
@@ -103,7 +106,7 @@ main {
 ========================= */
 
 .gallery-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.06);
 }
 
 
@@ -119,8 +122,10 @@ main {
 
     padding: 35px 20px 20px;
 
-    background: linear-gradient(transparent,
-            rgba(84, 59, 55, 0.85));
+    background: linear-gradient(
+        transparent,
+        rgba(84, 59, 55, 0.85)
+    );
 
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -143,7 +148,7 @@ main {
 
 .gallery-cta {
     text-align: center;
-    padding: 90px 20px;
+    padding: 70px 20px;
 
     background: #6b2f16;
     color: white;
@@ -151,22 +156,22 @@ main {
 
 .gallery-cta h2 {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin: 0 0 15px;
 }
 
 .gallery-cta p {
     max-width: 600px;
-    margin: 0 auto 30px;
+    margin: 0 auto 28px;
 
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.7;
 }
 
 .gallery-cta a {
     display: inline-block;
 
-    padding: 14px 30px;
+    padding: 13px 28px;
 
     background: white;
     color: #6b2f16;
@@ -176,11 +181,14 @@ main {
     text-decoration: none;
     font-weight: 700;
 
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .gallery-cta a:hover {
     transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -190,12 +198,16 @@ main {
 
 @media (max-width: 900px) {
 
+    .gallery-hero {
+        padding: 55px 20px 45px;
+    }
+
     .gallery-hero h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
     }
 
     .gallery-section {
-        padding: 70px 6%;
+        padding: 55px 6%;
     }
 
     .gallery-grid {
@@ -212,15 +224,23 @@ main {
 @media (max-width: 600px) {
 
     .gallery-hero {
-        padding: 60px 20px;
+        padding: 45px 20px 40px;
     }
 
     .gallery-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+    }
+
+    .gallery-hero > p:last-child {
+        font-size: 1rem;
     }
 
     .gallery-section {
-        padding: 60px 20px;
+        padding: 50px 20px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 30px;
     }
 
     .gallery-heading h2 {
@@ -229,7 +249,7 @@ main {
 
     .gallery-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 22px;
     }
 
     .gallery-item {
@@ -237,7 +257,7 @@ main {
     }
 
     .gallery-cta {
-        padding: 70px 20px;
+        padding: 60px 20px;
     }
 
     .gallery-cta h2 {
