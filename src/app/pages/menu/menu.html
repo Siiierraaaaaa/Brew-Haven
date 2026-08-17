@@ -1,1 +1,151 @@
-<p>menu works!</p>
+<main>
+
+  <!-- MENU HERO -->
+  <section class="menu-hero">
+
+    <p class="section-label">
+      BREW HAVEN COFFEE
+    </p>
+
+    <h1>
+      Our Menu
+    </h1>
+
+    <p>
+      Fresh coffee, delicious pastries, and something
+      for every kind of coffee lover.
+    </p>
+
+  </section>
+
+
+  <!-- COFFEE -->
+  <section class="menu-section">
+
+    <div class="menu-heading">
+
+      <p class="section-label">
+        COFFEE & DRINKS
+      </p>
+
+      <h2>
+        Coffee Favorites
+      </h2>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+      @for (item of coffee; track item.name) {
+
+        <article class="menu-card">
+
+          <img
+            [src]="item.image"
+            [alt]="item.name"
+          >
+
+          <div class="menu-card-content">
+
+            <div class="menu-card-heading">
+
+              <h3>
+                {{ item.name }}
+              </h3>
+
+              <span>
+                ${{ item.price.toFixed(2) }}
+              </span>
+
+            </div>
+
+            <p>
+              {{ item.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </section>
+
+
+  <!-- PASTRIES -->
+  <section class="menu-section pastries-section">
+
+    <div class="menu-heading">
+
+      <p class="section-label">
+        FRESH FROM THE BAKERY
+      </p>
+
+      <h2>
+        Pastries
+      </h2>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+      @for (item of pastries; track item.name) {
+
+        <article class="menu-card">
+
+          <img
+            [src]="item.image"
+            [alt]="item.name"
+          >
+
+          <div class="menu-card-content">
+
+            <div class="menu-card-heading">
+
+              <h3>
+                {{ item.name }}
+              </h3>
+
+              <span>
+                ${{ item.price.toFixed(2) }}
+              </span>
+
+            </div>
+
+            <p>
+              {{ item.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </section>
+
+
+  <!-- ORDER CTA -->
+  <section class="menu-cta">
+
+    <h2>
+      Ready for Your Coffee?
+    </h2>
+
+    <p>
+      Order your favorites online and we'll have them ready for you.
+    </p>
+
+    <a routerLink="/order-online">
+      Order Online →
+    </a>
+
+  </section>
+
+</main>

@@ -1,1 +1,602 @@
-<p>order-online works!</p>
+<main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="order-hero">
+
+        <p class="section-label">
+            BREW HAVEN COFFEE
+        </p>
+
+        <h1>
+            Order Online
+        </h1>
+
+        <p>
+            Choose your favorites and we'll have them ready for you.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         ORDER AREA
+    ========================== -->
+
+    <section class="order-section">
+
+
+        <!-- =========================
+             MENU VIEW
+        ========================== -->
+
+        @if (!showingCart && checkoutStep === 'cart') {
+
+            <div class="order-menu">
+
+                <div class="menu-heading">
+
+                    <p class="section-label">
+                        OUR MENU
+                    </p>
+
+                    <h2>
+                        Choose Your Favorites
+                    </h2>
+
+                </div>
+
+
+                <!-- CATEGORY BUTTONS -->
+
+                <div class="category-buttons">
+
+                    <button
+                        type="button"
+                        [class.active]="selectedCategory === 'Coffee'"
+                        (click)="selectCategory('Coffee')">
+                        Coffee
+                    </button>
+
+
+                    <button
+                        type="button"
+                        [class.active]="selectedCategory === 'Pastries'"
+                        (click)="selectCategory('Pastries')">
+                        Pastries
+                    </button>
+
+
+                    <button
+                        type="button"
+                        [class.active]="selectedCategory === 'Cold Drinks'"
+                        (click)="selectCategory('Cold Drinks')">
+                        Cold Drinks
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="cart-category-button"
+                        (click)="showCart()">
+                        🛒 Cart ({{ cartCount }})
+                    </button>
+
+                </div>
+
+
+                <!-- CATEGORY ITEMS -->
+
+                <div class="order-grid">
+
+                    @for (item of filteredItems; track item.id) {
+
+                        <article class="order-card">
+
+                            <img
+                                [src]="item.image"
+                                [alt]="item.name">
+
+
+                            <div class="order-card-content">
+
+                                <h3>
+                                    {{ item.name }}
+                                </h3>
+
+                                <p>
+                                    {{ item.description }}
+                                </p>
+
+                                <strong>
+                                    ${{ item.price.toFixed(2) }}
+                                </strong>
+
+
+                                <!-- QUANTITY -->
+
+                                <div class="quantity-controls">
+
+                                    <button
+                                        type="button"
+                                        (click)="removeFromCart(item)"
+                                        [disabled]="item.quantity === 0">
+                                        −
+                                    </button>
+
+
+                                    <span>
+                                        {{ item.quantity }}
+                                    </span>
+
+
+                                    <button
+                                        type="button"
+                                        (click)="addToCart(item)">
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    }
+
+                </div>
+
+            </div>
+
+        }
+
+
+        <!-- =========================
+             CART VIEW
+        ========================== -->
+
+        @if (showingCart && checkoutStep === 'cart') {
+
+            <div class="cart-page">
+
+                <div class="cart-page-header">
+
+                    <button
+                        type="button"
+                        class="back-button"
+                        (click)="showingCart = false; checkoutStep = 'cart'">
+
+                        ← Continue Shopping
+
+                    </button>
+
+
+                    <h2>
+                        Your Cart
+                    </h2>
+
+
+                    <span>
+                        {{ cartCount }} items
+                    </span>
+
+                </div>
+
+
+                <!-- EMPTY CART -->
+
+                @if (cartItems.length === 0) {
+
+                    <div class="empty-cart-page">
+
+                        <span>
+                            ☕
+                        </span>
+
+                        <h3>
+                            Your cart is empty
+                        </h3>
+
+                        <p>
+                            Add something delicious to your order!
+                        </p>
+
+                        <button
+                            type="button"
+                            (click)="showingCart = false; checkoutStep = 'cart'">
+
+                            Browse Menu
+
+                        </button>
+
+                    </div>
+
+                }
+
+
+                <!-- CART ITEMS -->
+
+                @if (cartItems.length > 0) {
+
+                    <div class="cart-page-items">
+
+                        @for (item of cartItems; track item.id) {
+
+                            <div class="cart-page-item">
+
+                                <img
+                                    [src]="item.image"
+                                    [alt]="item.name">
+
+
+                                <div class="cart-page-item-info">
+
+                                    <h3>
+                                        {{ item.name }}
+                                    </h3>
+
+                                    <p>
+                                        ${{ item.price.toFixed(2) }}
+                                    </p>
+
+
+                                    <div class="quantity-controls">
+
+                                        <button
+                                            type="button"
+                                            (click)="removeFromCart(item)">
+                                            −
+                                        </button>
+
+
+                                        <span>
+                                            {{ item.quantity }}
+                                        </span>
+
+
+                                        <button
+                                            type="button"
+                                            (click)="addToCart(item)">
+                                            +
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <strong>
+                                    ${{ (item.price * item.quantity).toFixed(2) }}
+                                </strong>
+
+                            </div>
+
+                        }
+
+                    </div>
+
+
+                    <!-- CART TOTALS -->
+
+                    <div class="cart-page-total">
+
+                        <div>
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <span>
+                                ${{ subtotal.toFixed(2) }}
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Tax
+                            </span>
+
+                            <span>
+                                ${{ tax.toFixed(2) }}
+                            </span>
+                        </div>
+
+
+                        <div class="total">
+
+                            <strong>
+                                Total
+                            </strong>
+
+                            <strong>
+                                ${{ total.toFixed(2) }}
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="checkout-button"
+                            (click)="startCheckout()">
+
+                            Proceed to Checkout →
+
+                        </button>
+
+                    </div>
+
+                }
+
+            </div>
+
+        }
+
+
+        <!-- =========================
+             CHECKOUT VIEW
+        ========================== -->
+
+        @if (checkoutStep === 'checkout') {
+
+            <section class="checkout-page">
+
+                <div class="checkout-header">
+
+                    <button
+                        type="button"
+                        class="back-button"
+                        (click)="backToCart()">
+
+                        ← Back to Cart
+
+                    </button>
+
+
+                    <h2>
+                        Checkout
+                    </h2>
+
+                    <p>
+                        Complete your information to place your order.
+                    </p>
+
+                </div>
+
+
+                <div class="checkout-layout">
+
+
+                    <!-- CUSTOMER INFORMATION -->
+
+                    <div class="checkout-form">
+
+                        <h3>
+                            Your Information
+                        </h3>
+
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                [(ngModel)]="customerName"
+                                placeholder="Your name">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="customerEmail"
+                                [(ngModel)]="customerEmail"
+                                placeholder="you@example.com">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                [(ngModel)]="customerPhone"
+                                placeholder="(404) 555-0123">
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="place-order-button"
+                            (click)="placeOrder()"
+                            [disabled]="!customerName || !customerEmail || !customerPhone">
+
+                            Place Order →
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- ORDER SUMMARY -->
+
+                    <div class="checkout-summary">
+
+                        <h3>
+                            Order Summary
+                        </h3>
+
+
+                        @for (item of cartItems; track item.id) {
+
+                            <div class="summary-item">
+
+                                <div>
+
+                                    <strong>
+                                        {{ item.name }}
+                                    </strong>
+
+                                    <span>
+                                        × {{ item.quantity }}
+                                    </span>
+
+                                </div>
+
+
+                                <span>
+                                    ${{ (item.price * item.quantity).toFixed(2) }}
+                                </span>
+
+                            </div>
+
+                        }
+
+
+                        <div class="summary-total">
+
+                            <div>
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <span>
+                                    ${{ subtotal.toFixed(2) }}
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Tax
+                                </span>
+
+                                <span>
+                                    ${{ tax.toFixed(2) }}
+                                </span>
+
+                            </div>
+
+
+                            <div class="final-total">
+
+                                <strong>
+                                    Total
+                                </strong>
+
+                                <strong>
+                                    ${{ total.toFixed(2) }}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        }
+
+
+        <!-- =========================
+             CONFIRMATION VIEW
+        ========================== -->
+
+        @if (checkoutStep === 'confirmation') {
+
+            <section class="confirmation-page">
+
+                <div class="confirmation-card">
+
+                    <div class="confirmation-icon">
+                        ✓
+                    </div>
+
+
+                    <p class="section-label">
+                        ORDER CONFIRMED
+                    </p>
+
+
+                    <h2>
+                        Thank You, {{ customerName }}!
+                    </h2>
+
+
+                    <p>
+                        Your Brew Haven order has been received.
+                        We're getting everything ready for you.
+                    </p>
+
+
+                    <div class="order-number">
+
+                        <span>
+                            Order Number
+                        </span>
+
+                        <strong>
+                            {{ orderNumber }}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confirmation-details">
+
+                        <p>
+                            A confirmation has been prepared for
+                            <strong>{{ customerEmail }}</strong>.
+                        </p>
+
+
+                        <p>
+                            Total:
+                            <strong>${{ total.toFixed(2) }}</strong>
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="new-order-button"
+                        (click)="startNewOrder()">
+
+                        Start a New Order
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        }
+
+    </section>
+
+</main>

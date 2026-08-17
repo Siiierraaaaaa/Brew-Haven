@@ -1,1 +1,81 @@
-<p>gallery works!</p>
+<main>
+
+    <!-- GALLERY HERO -->
+    <section class="gallery-hero">
+
+        <p class="section-label">
+            BREW HAVEN COFFEE
+        </p>
+
+        <h1>
+            Our Gallery
+        </h1>
+
+        <p>
+            Take a look inside Brew Haven and see
+            where coffee, community, and comfort come together.
+        </p>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+
+        <div class="gallery-heading">
+
+            <p class="section-label">
+                A LOOK INSIDE
+            </p>
+
+            <h2>
+                Life at Brew Haven
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            @for (photo of photos; track photo.image) {
+
+            <div class="gallery-item">
+
+                <img [src]="photo.image" [alt]="photo.title">
+
+                <div class="gallery-overlay">
+
+                    <h3>
+                        {{ photo.title }}
+                    </h3>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="gallery-cta">
+
+        <h2>
+            Come Visit Us
+        </h2>
+
+        <p>
+            There's nothing like enjoying your coffee
+            in person at Brew Haven.
+        </p>
+
+        <a routerLink="/contact">
+            Visit Us →
+        </a>
+
+    </section>
+
+</main>
