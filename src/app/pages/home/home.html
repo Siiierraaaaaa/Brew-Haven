@@ -1,0 +1,312 @@
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="hero-subtitle">
+                Fresh Coffee • Homemade Pastries
+            </p>
+
+            <h1>
+                Brewed with Heart,
+                Served with Happiness.
+            </h1>
+
+            <p class="hero-description">
+                Whether you're grabbing your morning latte,
+                meeting friends, or relaxing with a pastry,
+                Brew Haven Coffee is your cozy neighborhood café.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a routerLink="/menu" class="primary-btn">
+                    View Menu
+                </a>
+
+                <a routerLink="/order-online" class="secondary-btn">
+                    Order Online
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO IMAGE -->
+        <div class="hero-image">
+
+            <img
+                class="hero-img"
+                src="/Images/Coffee-and-food-1.jpg"
+                alt="Fresh coffee and pastries"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY US -->
+    <section class="whyus">
+
+        <div class="why-us-track">
+
+            @for (item of whyUs; track item.text) {
+
+                <div class="why-us-item">
+
+                    <img
+                        [src]="'/' + item.image"
+                        [alt]="item.text"
+                    >
+
+                    <span>
+                        {{ item.text }}
+                    </span>
+
+                </div>
+
+            }
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED SECTION -->
+    <section class="featured-section">
+
+        <!-- FEATURED DRINKS -->
+        <div class="featured-drinks">
+
+            <h3>Featured Drinks</h3>
+
+            <div class="drinks">
+
+                <div class="drink">
+
+                    <img
+                        src="/Images/black-coffee.png"
+                        alt="Cup of black coffee"
+                    >
+
+                    <p>Traditional Coffee</p>
+
+                </div>
+
+
+                <div class="drink">
+
+                    <img
+                        src="/Images/carmel-iced.png"
+                        alt="Iced caramel latte"
+                    >
+
+                    <p>Iced Coffee</p>
+
+                </div>
+
+
+                <div class="drink">
+
+                    <img
+                        src="/Images/iced-matcha.png"
+                        alt="Iced matcha drink"
+                    >
+
+                    <p>Iced Matcha</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURED MENU -->
+        <div class="featured-menu">
+
+            <h3>Featured Menu</h3>
+
+            <h4>Best Sellers</h4>
+
+            <a routerLink="/menu">
+                View Full Menu →
+            </a>
+
+            <img
+                src="/Images/Coffee-and-food-2.jpg"
+                id="menu-img"
+                alt="Brew Haven coffee and food"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+
+        <h2>What Our Customers Say</h2>
+
+        <div id="testimonial-container">
+
+            @for (testimonial of testimonials; track testimonial.name) {
+
+                <div class="testimonial-card">
+
+                    <p>
+                        "{{ testimonial.message }}"
+                    </p>
+
+                    <h3>
+                        {{ testimonial.name }}
+                    </h3>
+
+                    <span>
+                        ★★★★★
+                    </span>
+
+                </div>
+
+            }
+
+        </div>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="call-to-action">
+
+
+        <!-- OUR STORY -->
+        <div class="our-story">
+
+            <div class="call-icon">
+                📖
+            </div>
+
+            <div>
+
+                <h3>Our Story</h3>
+
+                <p>
+                    Learn more about Brew Haven
+                </p>
+
+                <a routerLink="/about">
+                    Click Here →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- OUR COFFEE -->
+        <div class="our-coffee-bio">
+
+            <div class="call-icon">
+                ☕
+            </div>
+
+            <div>
+
+                <h3>Our Coffee</h3>
+
+                <p>
+                    Check out where our award winning coffee is from
+                </p>
+
+                <button
+                    type="button"
+                    (click)="openModal('our-coffee')"
+                >
+                    View More →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- OUR COFFEE MODAL -->
+        <div
+            class="our-coffee"
+            [class.active]="activeModal === 'our-coffee'"
+        >
+
+            <div class="coffee-story-header">
+
+                <h2>Our Coffee</h2>
+
+                <button
+                    type="button"
+                    class="coffee-story-close-button"
+                    (click)="closeModal()"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+            <div class="coffee-story-body">
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Blanditiis nihil asperiores
+                    reiciendis consequuntur, voluptatibus quasi
+                    fugiat suscipit! Deserunt vitae sunt quis
+                    provident sit ut harum accusantium nam,
+                    maxime aliquid autem!
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- OVERLAY -->
+        <div
+            id="overlay"
+            [class.active]="activeModal === 'our-coffee'"
+            (click)="closeModal()"
+        ></div>
+
+
+        <!-- LOCATION -->
+        <div class="location">
+
+            <div class="call-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h3>Visit Us</h3>
+
+                <p>
+                    Find us on Google Maps.
+                </p>
+
+                <a
+                    href="https://maps.app.goo.gl/k5i51asqncuvhvxy5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Get Directions →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>

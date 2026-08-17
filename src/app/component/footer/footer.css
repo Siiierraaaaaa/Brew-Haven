@@ -1,0 +1,131 @@
+footer {
+    background-color: #543B37;
+    color: #fff;
+    padding: 4rem 6% 1.5rem;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+
+    margin-top: 4rem;
+}
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    max-width: 280px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Social links */
+
+.footer-logo a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-logo a:hover {
+    color: #DB9C85;
+}
+
+
+/* ========================================
+   FOOTER HEADINGS
+======================================== */
+
+footer h3 {
+    color: #FEEBED;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+
+/* ========================================
+   QUICK LINKS + MENU
+======================================== */
+
+.quick-links,
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.quick-links a,
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+    transition: color 0.2s ease;
+}
+
+.quick-links a:hover,
+.menu a:hover {
+    color: #DB9C85;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-us a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-us a:hover {
+    color: #DB9C85;
+}
+
+.footer-address p {
+    margin-top: 0.25rem;
+    color: #fff;
+}
+
+
+/* ========================================
+   FOOTER CREDIT
+======================================== */
+
+.footer-credit {
+    grid-column: 1 / -1;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+
+    text-align: center;
+
+    font-size: 0.85rem;
+}
+
+.footer-credit p {
+    margin: 0.3rem 0;
+}
+
+.footer-credit a {
+    color: #FEEBED;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-credit a:hover {
+    color: #DB9C85;
+}

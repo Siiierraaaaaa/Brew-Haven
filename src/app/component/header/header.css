@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 11px 75px;
+
+    background: #e4d6a9;
+}
+
+.navbar-img {
+    width: 180px;
+    height: auto;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #622b14;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar-links a:hover {
+    color: #995f2f;
+}
+
+.order-online {
+    text-decoration: none;
+
+    background: #622b14;
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 40px;
+
+    transition: .3s;
+}
+
+.order-online:hover {
+    background: #995f2f;
+}
