@@ -51,11 +51,11 @@ export class Gallery {
       title: 'Inside Brew Haven'
     },
     {
-      image: '/Images/Coffee-store-4.jpg',
+      image: '/Images/coffee-vibe.jpg',
       title: 'Cafe Atmosphere'
     },
     {
-      image: '/Images/Coffee-store-5.jpg',
+      image: '/Images/outside-coffee-shop.jpg',
       title: 'Our Coffee Shop'
     }
   ];

@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 11px 5%;
+    padding: 7px 5%;
 
     background: #e4d6a9;
 
@@ -33,7 +33,7 @@
 .navbar-img {
     display: block;
 
-    width: 180px;
+    width: 145px;
     height: auto;
 }
 
@@ -52,7 +52,7 @@
 .navbar-links a {
     color: #622b14;
 
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 
     text-decoration: none;
@@ -72,7 +72,7 @@
 .order-online {
     display: inline-block;
 
-    padding: 12px 24px;
+    padding: 12px 20px;
 
     background: #622b14;
 
@@ -84,8 +84,7 @@
 
     text-decoration: none;
 
-    transition:
-        background 0.3s ease,
+    transition:background 0.3s ease,
         transform 0.3s ease;
 }
 
@@ -142,24 +141,24 @@
 @media (max-width: 1000px) {
 
     .navbar {
-        padding: 11px 4%;
+        padding: 7px 4%;
     }
 
     .navbar-links {
-        gap: 25px;
+        gap: 22px;
     }
 
     .navbar-links a {
-        font-size: 16px;
-    }
-
-    .order-online {
-        padding: 10px 19px;
         font-size: 15px;
     }
 
+    .order-online {
+        padding: 8px 17px;
+        font-size: 14px;
+    }
+
     .navbar-img {
-        width: 155px;
+        width: 135px;
     }
 }
 

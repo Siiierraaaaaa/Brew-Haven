@@ -91,7 +91,79 @@ export class OrderOnline {
       price: 4.00,
       image: '/Images/Coffee-3.jpg',
       quantity: 0
-    }
+    },
+     {
+      id: 7,
+      category: 'Coffee',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
+     {
+      id: 8,
+      category: 'Coffee',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
+     {
+      id: 9,
+      category: 'Coffee',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
+     {
+      id: 10,
+      category: 'Coffee',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
+     {
+      id: 11,
+      category: 'Coffee',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
+     {
+      id: 12,
+      category: 'Coffee',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
+     {
+      id: 13,
+      category: 'Coffee',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
+     {
+      id: 14,
+      category: 'Smoothie',
+      name: 'Traditional Coffee',
+      description: 'Rich, smooth brewed coffee made fresh every day.',
+      price: 3.50,
+      image: '/Images/black-coffee.png',
+      quantity: 0
+    },
 
   ];
 

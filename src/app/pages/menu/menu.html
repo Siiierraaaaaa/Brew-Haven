@@ -130,6 +130,117 @@
 
   </section>
 
+  <!-- Tea -->
+   <section class="menu-section">
+
+    <div class="menu-heading">
+
+      <p class="section-label">
+      SLOW BREW TEA
+      </p>
+
+      <h2>
+       Tea
+      </h2>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+      @for (item of tea; track item.name) {
+
+        <article class="menu-card">
+
+          <img
+            [src]="item.image"
+            [alt]="item.name"
+          >
+
+          <div class="menu-card-content">
+
+            <div class="menu-card-heading">
+
+              <h3>
+                {{ item.name }}
+              </h3>
+
+              <span>
+                ${{ item.price.toFixed(2) }}
+              </span>
+
+            </div>
+
+            <p>
+              {{ item.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </section>
+
+   <!-- Smothies -->
+    <section class="menu-section">
+
+    <div class="menu-heading">
+
+      <p class="section-label">
+         MADE WITH REAL FRUIT
+      </p>
+
+      <h2>
+      Smoothie 
+      </h2>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+      @for (item of drinks; track item.name) {
+
+        <article class="menu-card">
+
+          <img
+            [src]="item.image"
+            [alt]="item.name"
+          >
+
+          <div class="menu-card-content">
+
+            <div class="menu-card-heading">
+
+              <h3>
+                {{ item.name }}
+              </h3>
+
+              <span>
+                ${{ item.price.toFixed(2) }}
+              </span>
+
+            </div>
+
+            <p>
+              {{ item.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </section>
+
+
 
   <!-- ORDER CTA -->
   <section class="menu-cta">

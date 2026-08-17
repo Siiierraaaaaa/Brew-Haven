@@ -11,17 +11,17 @@ export class Contact {
 
   contactInfo = [
     {
-      icon: '📍',
+      icon: '/Images/map-icon.png',
       title: 'Visit Us',
-      text: '123 Brew Haven Lane, Atlanta, GA'
+      text: '123 Coffee Lane, New Orleans, LA 70119'
     },
     {
-      icon: '📞',
+      icon: '/Images/phone-icon.png',
       title: 'Call Us',
-      text: '(404) 555-0123'
+      text: '(504) 123-4567'
     },
     {
-      icon: '✉️',
+      icon: '/Images/email-icon.png',
       title: 'Email Us',
       text: 'hello@brewhavencoffee.com'
     }
