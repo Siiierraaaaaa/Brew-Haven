@@ -38,11 +38,7 @@
         <!-- HERO IMAGE -->
         <div class="hero-image">
 
-            <img
-                class="hero-img"
-                src="/Images/Coffee-and-food-1.jpg"
-                alt="Fresh coffee and pastries"
-            >
+            <img class="hero-img" src="/Images/Coffee-and-food-1.jpg" alt="Fresh coffee and pastries">
 
         </div>
 
@@ -52,22 +48,19 @@
     <!-- WHY US -->
     <section class="whyus">
 
-        <div class="why-us-track">
+        <div class="why-us-container">
 
             @for (item of whyUs; track item.text) {
 
-                <div class="why-us-item">
+            <div class="why-us-item">
 
-                    <img
-                        [src]="'/' + item.image"
-                        [alt]="item.text"
-                    >
+                <img [src]="item.image" [alt]="item.text">
 
-                    <span>
-                        {{ item.text }}
-                    </span>
+                <span>
+                    {{ item.text }}
+                </span>
 
-                </div>
+            </div>
 
             }
 
@@ -80,44 +73,77 @@
     <section class="featured-section">
 
         <!-- FEATURED DRINKS -->
+
         <div class="featured-drinks">
 
-            <h3>Featured Drinks</h3>
+            <div class="featured-heading">
+
+                <p class="section-label">
+                    OUR FAVORITES
+                </p>
+
+                <h2>
+                    Featured Drinks
+                </h2>
+
+            </div>
+
 
             <div class="drinks">
 
                 <div class="drink">
 
-                    <img
-                        src="/Images/black-coffee.png"
-                        alt="Cup of black coffee"
-                    >
+                    <img src="/Images/black-coffee.png" alt="Traditional coffee">
 
-                    <p>Traditional Coffee</p>
+                    <div class="drink-info">
 
-                </div>
+                        <h3>
+                            Traditional Coffee
+                        </h3>
 
+                        <p>
+                            Rich, smooth, and brewed fresh.
+                        </p>
 
-                <div class="drink">
-
-                    <img
-                        src="/Images/carmel-iced.png"
-                        alt="Iced caramel latte"
-                    >
-
-                    <p>Iced Coffee</p>
+                    </div>
 
                 </div>
 
 
                 <div class="drink">
 
-                    <img
-                        src="/Images/iced-matcha.png"
-                        alt="Iced matcha drink"
-                    >
+                    <img src="/Images/carmel-iced.png" alt="Iced caramel latte">
 
-                    <p>Iced Matcha</p>
+                    <div class="drink-info">
+
+                        <h3>
+                            Iced Coffee
+                        </h3>
+
+                        <p>
+                            Smooth espresso over ice.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="drink">
+
+                    <img src="/Images/iced-matcha.png" alt="Iced matcha">
+
+                    <div class="drink-info">
+
+                        <h3>
+                            Iced Matcha
+                        </h3>
+
+                        <p>
+                            Creamy, refreshing, and perfectly balanced.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -127,21 +153,40 @@
 
 
         <!-- FEATURED MENU -->
+
         <div class="featured-menu">
 
-            <h3>Featured Menu</h3>
+            <div class="featured-menu-image">
 
-            <h4>Best Sellers</h4>
+                <img src="/Images/Coffee-and-food-2.jpg" alt="Brew Haven coffee and pastry">
 
-            <a routerLink="/menu">
-                View Full Menu →
-            </a>
+            </div>
 
-            <img
-                src="/Images/Coffee-and-food-2.jpg"
-                id="menu-img"
-                alt="Brew Haven coffee and food"
-            >
+
+            <div class="featured-menu-content">
+
+                <p class="section-label">
+                    FROM OUR KITCHEN
+                </p>
+
+                <h2>
+                    Featured Menu
+                </h2>
+
+                <h3>
+                    Best Sellers
+                </h3>
+
+                <p>
+                    Discover some of our favorite drinks and freshly
+                    baked treats.
+                </p>
+
+                <a routerLink="/menu">
+                    View Full Menu →
+                </a>
+
+            </div>
 
         </div>
 
@@ -157,21 +202,21 @@
 
             @for (testimonial of testimonials; track testimonial.name) {
 
-                <div class="testimonial-card">
+            <div class="testimonial-card">
 
-                    <p>
-                        "{{ testimonial.message }}"
-                    </p>
+                <p>
+                    "{{ testimonial.message }}"
+                </p>
 
-                    <h3>
-                        {{ testimonial.name }}
-                    </h3>
+                <h3>
+                    {{ testimonial.name }}
+                </h3>
 
-                    <span>
-                        ★★★★★
-                    </span>
+                <span>
+                    ★★★★★
+                </span>
 
-                </div>
+            </div>
 
             }
 
@@ -223,10 +268,7 @@
                     Check out where our award winning coffee is from
                 </p>
 
-                <button
-                    type="button"
-                    (click)="openModal('our-coffee')"
-                >
+                <button type="button" (click)="openModal('our-coffee')">
                     View More →
                 </button>
 
@@ -236,20 +278,13 @@
 
 
         <!-- OUR COFFEE MODAL -->
-        <div
-            class="our-coffee"
-            [class.active]="activeModal === 'our-coffee'"
-        >
+        <div class="our-coffee" [class.active]="activeModal === 'our-coffee'">
 
             <div class="coffee-story-header">
 
                 <h2>Our Coffee</h2>
 
-                <button
-                    type="button"
-                    class="coffee-story-close-button"
-                    (click)="closeModal()"
-                >
+                <button type="button" class="coffee-story-close-button" (click)="closeModal()">
                     &times;
                 </button>
 
@@ -259,12 +294,9 @@
             <div class="coffee-story-body">
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Blanditiis nihil asperiores
-                    reiciendis consequuntur, voluptatibus quasi
-                    fugiat suscipit! Deserunt vitae sunt quis
-                    provident sit ut harum accusantium nam,
-                    maxime aliquid autem!
+                    At Brew Haven, we believe great coffee starts with great beans. We partner with local roasters who
+                    carefully source and roast high-quality beans to bring out rich, balanced flavors in every cup. From
+                    your first morning sip to your afternoon pick-me-up, every cup is brewed with care.
                 </p>
 
             </div>
@@ -273,11 +305,7 @@
 
 
         <!-- OVERLAY -->
-        <div
-            id="overlay"
-            [class.active]="activeModal === 'our-coffee'"
-            (click)="closeModal()"
-        ></div>
+        <div id="overlay" [class.active]="activeModal === 'our-coffee'" (click)="closeModal()"></div>
 
 
         <!-- LOCATION -->
@@ -295,11 +323,7 @@
                     Find us on Google Maps.
                 </p>
 
-                <a
-                    href="https://maps.app.goo.gl/k5i51asqncuvhvxy5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://maps.app.goo.gl/k5i51asqncuvhvxy5" target="_blank" rel="noopener noreferrer">
                     Get Directions →
                 </a>
 
