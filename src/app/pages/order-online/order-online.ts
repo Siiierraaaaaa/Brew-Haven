@@ -45,9 +45,9 @@ export class OrderOnline {
 
     {
       id: 2,
-      category: 'Coffee',
-      name: 'Iced Coffee',
-      description: 'Refreshing iced coffee served over ice.',
+      category: 'Cold Drinks',
+      name: 'Iced Carmel Coffee',
+      description: 'Refreshing iced carmel coffee served over ice.',
       price: 4.50,
       image: '/Images/carmel-iced.png',
       quantity: 0
@@ -62,19 +62,37 @@ export class OrderOnline {
       image: '/Images/iced-matcha.png',
       quantity: 0
     },
-
-    {
+      {
       id: 4,
-      category: 'Pastries',
-      name: 'Fresh Croissant',
-      description: 'Buttery, flaky and baked fresh.',
-      price: 3.75,
-      image: '/Images/Coffee-and-food-1.jpg',
+      category: 'Cold Drinks',
+      name: 'Iced Vanilla Latte',
+      description: 'Refreshing iced carmel coffee served over ice.',
+      price: 4.50,
+      image: '/Images/iced-vanilla.jpg',
+      quantity: 0
+    },
+      {
+      id: 5,
+      category: 'Cold Drinks',
+      name: 'Cold Brew',
+      description: 'Rich, smooth brewed coffee made fresh every day over ice.',
+      price: 3.50,
+      image: '/Images/cold-brew.jpg',
       quantity: 0
     },
 
     {
-      id: 5,
+      id: 6,
+      category: 'Pastries',
+      name: 'Fresh Croissant',
+      description: 'Buttery, flaky and baked fresh.',
+      price: 3.75,
+      image: '/Images/crossiant.jpg',
+      quantity: 0
+    },
+
+    {
+      id: 7,
       category: 'Pastries',
       name: 'Chocolate Pastry',
       description: 'A sweet pastry made for pairing with coffee.',
@@ -82,86 +100,68 @@ export class OrderOnline {
       image: '/Images/Coffee-and-food-2.jpg',
       quantity: 0
     },
-
-    {
-      id: 6,
+     {
+      id: 8,
       category: 'Pastries',
       name: 'Daily Pastry',
       description: 'Ask about our fresh pastry of the day.',
       price: 4.00,
-      image: '/Images/Coffee-3.jpg',
+      image: '/Images/scone.jpg',
       quantity: 0
     },
-     {
-      id: 7,
-      category: 'Coffee',
-      name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
-      quantity: 0
-    },
-     {
-      id: 8,
-      category: 'Coffee',
-      name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
-      quantity: 0
-    },
+   
      {
       id: 9,
-      category: 'Coffee',
-      name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
+      category: 'Tea',
+      name: 'Aronald Palmer',
+      description: 'Rich, smooth brewed tea and homemade lemonade made fresh every day',
+      price: 4.75,
+      image: '/Images/arnold-palmer.jpg',
       quantity: 0
     },
      {
       id: 10,
-      category: 'Coffee',
-      name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
+      category: 'Tea',
+      name: 'Traditional Tea',
+      description: 'Rich, smooth brewed tea made fresh every day.',
+      price: 4.00,
+      image: '/Images/black-tea.jpg',
       quantity: 0
     },
      {
       id: 11,
-      category: 'Coffee',
-      name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
+      category: 'Tea',
+      name: 'Green Tea',
+      description: 'Rich, smooth brewed green tea made fresh every day.',
+      price: 4.00,
+      image: '/Images/green-tea.jpg',
       quantity: 0
     },
      {
       id: 12,
-      category: 'Coffee',
-      name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
+      category: 'Smoothies',
+      name: 'Strawberry',
+      description: 'Made with fresh strawberries.',
+      price: 5.00,
+      image: '/Images/strawberry-smothie.jpg',
       quantity: 0
     },
      {
       id: 13,
-      category: 'Coffee',
-      name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
+      category: 'Smoothies',
+      name: 'Banana',
+      description: 'Made with fresh bananas.',
+      price: 5.00,
+      image: '/Images/banana-smothie.jpg',
       quantity: 0
     },
      {
       id: 14,
-      category: 'Smoothie',
+      category: 'Coconut',
       name: 'Traditional Coffee',
-      description: 'Rich, smooth brewed coffee made fresh every day.',
-      price: 3.50,
-      image: '/Images/black-coffee.png',
+      description: 'Made with fresh coconut milk and strawberries.',
+      price: 5.00,
+      image: '/Images/coconut-smothie.jpg',
       quantity: 0
     },
 

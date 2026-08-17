@@ -65,39 +65,39 @@ export class Menu {
   drinks =[
     {
       name: 'Strawberry Smothie',
-      description: 'Buttery, flaky and baked fresh.',
+      description: 'Made with fresh strawberries.',
       price: 5.75,
       image: '/Images/strawberry-smothie.jpg'
     },
     {
       name: 'Banana Smothie',
-      description: 'Buttery, flaky and baked fresh.',
+      description: 'Made with fresh bananas',
       price: 5.75,
       image: '/Images/banana-smothie.jpg'
     },
     {
       name: 'Coconut Smothie',
-      description: 'Buttery, flaky and baked fresh.',
+      description: 'Made with fresh coconut milk and strawberries.',
       price: 5.75,
       image: '/Images/coconut-smothie.jpg'
     },
   ]
   tea =[
     {
-      name: 'Black Tea',
-      description: 'Buttery, flaky and baked fresh.',
+      name: 'Traditional Tea',
+      description: 'Rich, smooth brewed tea made fresh every day',
       price: 4.75,
       image: '/Images/black-tea.jpg'
     },
     {
       name: 'Green Tea',
-      description: 'Buttery, flaky and baked fresh.',
+      description: 'Rich, smooth brewed green tea made fresh every day',
       price: 4.75,
       image: '/Images/green-tea.jpg'
     },
     {
       name: 'Aronald Palmer',
-      description: 'Buttery, flaky and baked fresh.',
+      description: 'Rich, smooth brewed tea and homemade lemonade made fresh every day',
       price: 4.75,
       image: '/Images/arnold-palmer.jpg'
     },

@@ -1,4 +1,4 @@
-<main>
+
 
     <!-- =========================
          HERO
@@ -49,43 +49,54 @@
                 </div>
 
 
+
                 <!-- CATEGORY BUTTONS -->
 
-                <div class="category-buttons">
+<div class="category-buttons">
 
-                    <button
-                        type="button"
-                        [class.active]="selectedCategory === 'Coffee'"
-                        (click)="selectCategory('Coffee')">
-                        Coffee
-                    </button>
+    <button
+        type="button"
+        [class.active]="selectedCategory === 'Coffee'"
+        (click)="selectCategory('Coffee')">
+        Coffee
+    </button>
 
+    <button
+        type="button"
+        [class.active]="selectedCategory === 'Cold Drinks'"
+        (click)="selectCategory('Cold Drinks')">
+        Cold Drinks
+    </button>
 
-                    <button
-                        type="button"
-                        [class.active]="selectedCategory === 'Pastries'"
-                        (click)="selectCategory('Pastries')">
-                        Pastries
-                    </button>
+    <button
+        type="button"
+        [class.active]="selectedCategory === 'Pastries'"
+        (click)="selectCategory('Pastries')">
+        Pastries
+    </button>
 
+    <button
+        type="button"
+        [class.active]="selectedCategory === 'Tea'"
+        (click)="selectCategory('Tea')">
+        Tea
+    </button>
 
-                    <button
-                        type="button"
-                        [class.active]="selectedCategory === 'Cold Drinks'"
-                        (click)="selectCategory('Cold Drinks')">
-                        Cold Drinks
-                    </button>
+    <button
+        type="button"
+        [class.active]="selectedCategory === 'Smoothies'"
+        (click)="selectCategory('Smoothies')">
+        Smoothies
+    </button>
 
+    <button
+        type="button"
+        class="cart-category-button"
+        (click)="showCart()">
+        🛒 Cart ({{ cartCount }})
+    </button>
 
-                    <button
-                        type="button"
-                        class="cart-category-button"
-                        (click)="showCart()">
-                        🛒 Cart ({{ cartCount }})
-                    </button>
-
-                </div>
-
+</div>
 
                 <!-- CATEGORY ITEMS -->
 
@@ -597,6 +608,5 @@
 
         }
 
-    </section>
+  
 
-</main>
