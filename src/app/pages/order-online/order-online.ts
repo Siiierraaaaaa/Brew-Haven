@@ -67,7 +67,7 @@ export class OrderOnline {
       category: 'Cold Drinks',
       name: 'Iced Vanilla Latte',
       description: 'Refreshing iced carmel coffee served over ice.',
-      price: 4.50,
+      price: 5.00,
       image: '/Images/iced-vanilla.jpg',
       quantity: 0
     },
@@ -76,7 +76,7 @@ export class OrderOnline {
       category: 'Cold Drinks',
       name: 'Cold Brew',
       description: 'Rich, smooth brewed coffee made fresh every day over ice.',
-      price: 3.50,
+      price: 5.00,
       image: '/Images/cold-brew.jpg',
       quantity: 0
     },
@@ -124,7 +124,7 @@ export class OrderOnline {
       category: 'Tea',
       name: 'Traditional Tea',
       description: 'Rich, smooth brewed tea made fresh every day.',
-      price: 4.00,
+      price: 4.75,
       image: '/Images/black-tea.jpg',
       quantity: 0
     },
@@ -133,7 +133,7 @@ export class OrderOnline {
       category: 'Tea',
       name: 'Green Tea',
       description: 'Rich, smooth brewed green tea made fresh every day.',
-      price: 4.00,
+      price: 4.75,
       image: '/Images/green-tea.jpg',
       quantity: 0
     },
@@ -142,7 +142,7 @@ export class OrderOnline {
       category: 'Smoothies',
       name: 'Strawberry',
       description: 'Made with fresh strawberries.',
-      price: 5.00,
+      price: 5.75,
       image: '/Images/strawberry-smothie.jpg',
       quantity: 0
     },
@@ -151,7 +151,7 @@ export class OrderOnline {
       category: 'Smoothies',
       name: 'Banana',
       description: 'Made with fresh bananas.',
-      price: 5.00,
+      price: 5.75,
       image: '/Images/banana-smothie.jpg',
       quantity: 0
     },
@@ -160,7 +160,7 @@ export class OrderOnline {
       category: 'Coconut',
       name: 'Traditional Coffee',
       description: 'Made with fresh coconut milk and strawberries.',
-      price: 5.00,
+      price: 5.75,
       image: '/Images/coconut-smothie.jpg',
       quantity: 0
     },
