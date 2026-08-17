@@ -12,19 +12,19 @@ export class Home {
   // Why Us section
   whyUs = [
     {
-      image: 'images/WhyUS-icon-1.png',
+      image: '/Images/WhyUS-icon-1.png',
       text: 'Premium Beans'
     },
     {
-      image: 'images/WhyUS-icon.png',
+      image: '/Images/WhyUS-icon.png',
       text: 'Fresh Pastries'
     },
     {
-      image: 'images/WhyUS-icon-2.png',
+      image: '/Images/WhyUS-icon-2.png',
       text: 'Free Wifi'
     },
     {
-      image: 'images/WhyUS-icon-3.png',
+      image: '/Images/WhyUS-icon-3.png',
       text: 'Locally Roasted'
     }
   ];
