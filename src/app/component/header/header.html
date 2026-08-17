@@ -1,19 +1,75 @@
 <nav class="navbar">
 
-    <a href="index.html" class="logo">
-        <img class="navbar-img" src="public/Brew-Haven-Coffee-Logo-Sage.png" alt="Brew Haven Coffee Logo">
+    <!-- Logo -->
+    <a routerLink="/" class="logo">
+        <img
+            class="navbar-img"
+            src="images/Brew-Haven-Coffee-Logo-Sage.png"
+            alt="Brew Haven Coffee Logo"
+        >
     </a>
 
-    <div class="navbar-links">
-        <a routerLink="/">Home</a>
-        <a routerLink="/about">Our Story</a>
-        <a routerLink="/menu">Menu</a>
-        <a routerLink="/gallery">Gallery</a>
-        <a routerLink="/contact">Contact</a>
+
+    <!-- Desktop / Mobile Navigation -->
+    <div
+        class="navbar-links"
+        [class.mobile-open]="menuOpen"
+    >
+
+        <a routerLink="/" (click)="closeMenu()">
+            Home
+        </a>
+
+        <a routerLink="/about" (click)="closeMenu()">
+            Our Story
+        </a>
+
+        <a routerLink="/menu" (click)="closeMenu()">
+            Menu
+        </a>
+
+        <a routerLink="/gallery" (click)="closeMenu()">
+            Gallery
+        </a>
+
+        <a routerLink="/contact" (click)="closeMenu()">
+            Contact
+        </a>
+
+        <!-- Mobile Order Button -->
+        <a
+            class="mobile-order"
+            routerLink="/order-online"
+            (click)="closeMenu()"
+        >
+            Order Online
+        </a>
+
     </div>
 
-    <a class="order-online" routerLink="/order-online">
+
+    <!-- Desktop Order Button -->
+    <a
+        class="order-online"
+        routerLink="/order-online"
+    >
         Order Online
     </a>
+
+
+    <!-- Mobile Hamburger -->
+    <button
+        type="button"
+        class="menu-toggle"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen"
+        aria-label="Toggle navigation menu"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
 
 </nav>

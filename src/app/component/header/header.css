@@ -1,47 +1,291 @@
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
+
 .navbar {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 11px 75px;
+    padding: 11px 5%;
 
     background: #e4d6a9;
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-img {
+    display: block;
+
     width: 180px;
     height: auto;
 }
 
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
 .navbar-links {
     display: flex;
+    align-items: center;
+
     gap: 40px;
 }
 
 .navbar-links a {
-    text-decoration: none;
     color: #622b14;
+
     font-size: 18px;
     font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
     color: #995f2f;
 }
 
-.order-online {
-    text-decoration: none;
 
-    background: #622b14;
-    color: white;
+/* =========================================
+   ORDER ONLINE BUTTON
+========================================= */
+
+.order-online {
+    display: inline-block;
 
     padding: 12px 24px;
 
+    background: #622b14;
+
     border-radius: 40px;
 
-    transition: .3s;
+    color: white;
+
+    font-size: 16px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
 .order-online:hover {
     background: #995f2f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 25px;
+    height: 3px;
+
+    background: #622b14;
+
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 11px 4%;
+    }
+
+    .navbar-links {
+        gap: 25px;
+    }
+
+    .navbar-links a {
+        font-size: 16px;
+    }
+
+    .order-online {
+        padding: 10px 19px;
+
+        font-size: 15px;
+    }
+
+    .navbar-img {
+        width: 155px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 12px 5%;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* Logo */
+
+    .navbar-img {
+        width: 145px;
+    }
+
+
+    /* Show hamburger */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    /* Hide desktop order button */
+
+    .navbar > .order-online {
+        display: none;
+    }
+
+
+    /* Mobile navigation */
+
+    .navbar-links {
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        margin-top: 12px;
+
+        padding: 10px 0 5px;
+
+        border-top: 1px solid rgba(98, 43, 20, 0.2);
+    }
+
+
+    /* When menu is open */
+
+    .navbar-links.mobile-open {
+        display: flex;
+    }
+
+
+    .navbar-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 10px;
+
+        color: #622b14;
+
+        font-size: 17px;
+
+        border-radius: 8px;
+    }
+
+    .navbar-links a:hover {
+        background: rgba(255, 255, 255, 0.35);
+    }
+
+
+    /* Order Online inside mobile menu */
+
+    .navbar-links .mobile-order {
+        display: block;
+
+        margin-top: 8px;
+
+        padding: 13px 20px;
+
+        background: #622b14;
+
+        color: white;
+
+        border-radius: 30px;
+
+        text-align: center;
+    }
+
+    .navbar-links .mobile-order:hover {
+        background: #995f2f;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .navbar-img {
+        width: 125px;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-toggle span {
+        width: 23px;
+    }
+
+    .navbar-links a {
+        font-size: 16px;
+    }
 }
