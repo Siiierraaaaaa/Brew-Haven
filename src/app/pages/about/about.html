@@ -1,1 +1,161 @@
-<p>about works!</p>
+<main>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+
+    <div class="about-hero-text">
+
+      <p class="about-subtitle">
+        OUR STORY
+      </p>
+
+      <h1>
+        More Than Coffee,
+        It's a Place to Belong.
+      </h1>
+
+      <p>
+        Brew Haven Coffee was created to be more than just
+        another coffee shop. It's a cozy neighborhood café
+        where great coffee, fresh pastries, and good company
+        come together.
+      </p>
+
+    </div>
+
+    <div class="about-hero-image">
+
+      <img
+        src="/Images/Coffee-store-1.jpg"
+        alt="Brew Haven Coffee shop"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- OUR STORY -->
+  <section class="story-section">
+
+    <div class="story-image">
+
+      <img
+        src="/Images/Coffee-and-food-2.jpg"
+        alt="Coffee and pastries at Brew Haven"
+      >
+
+    </div>
+
+    <div class="story-text">
+
+      <p class="section-label">
+        OUR STORY
+      </p>
+
+      <h2>
+        A Cozy Place Built Around Good Coffee
+      </h2>
+
+      <p>
+        At Brew Haven, we believe coffee is about more than
+        what's in your cup. It's about the conversations,
+        connections, and little moments that happen around it.
+      </p>
+
+      <p>
+        From your first morning coffee to an afternoon pastry
+        with friends, we want every visit to feel welcoming,
+        comfortable, and worth coming back to.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- OUR MISSION -->
+  <section class="mission-section">
+
+    <p class="section-label">
+      OUR MISSION
+    </p>
+
+    <h2>
+      Creating Moments Over Coffee
+    </h2>
+
+    <p>
+      Our mission is simple: serve quality coffee and fresh
+      food while creating a warm environment where everyone
+      feels at home.
+    </p>
+
+  </section>
+
+
+  <!-- WHAT MAKES US DIFFERENT -->
+  <section class="features-section">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        WHY BREW HAVEN
+      </p>
+
+      <h2>
+        What Makes Us Different
+      </h2>
+
+    </div>
+
+
+    <div class="features">
+
+      @for (feature of features; track feature.title) {
+
+        <div class="feature-card">
+
+          <h3>
+            {{ feature.title }}
+          </h3>
+
+          <p>
+            {{ feature.description }}
+          </p>
+
+        </div>
+
+      }
+
+    </div>
+
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+  <section class="about-cta">
+
+    <h2>
+      Come Find Your New Favorite Coffee Spot.
+    </h2>
+
+    <p>
+      Stop by Brew Haven, grab a cup, and stay awhile.
+    </p>
+
+    <div class="cta-buttons">
+
+      <a routerLink="/menu">
+        View Our Menu
+      </a>
+
+      <a routerLink="/order-online">
+        Order Online
+      </a>
+
+    </div>
+
+  </section>
+
+</main>

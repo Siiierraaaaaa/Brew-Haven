@@ -1,0 +1,316 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
+main {
+  background: #f8f4ef;
+  color: #543b37;
+}
+
+
+/* =========================
+   ABOUT HERO
+========================= */
+
+.about-hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 8%;
+}
+
+.about-hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-subtitle,
+.section-label {
+  color: #a76538;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.about-hero h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0 0 25px;
+  color: #6b2f16;
+}
+
+.about-hero-text > p:last-child {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #5f5a57;
+}
+
+.about-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-hero-image img {
+  width: 100%;
+  max-width: 550px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+
+/* =========================
+   OUR STORY
+========================= */
+
+.story-section {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 90px 8%;
+  background: #fffaf5;
+}
+
+.story-image,
+.story-text {
+  flex: 1;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 550px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.story-text {
+  max-width: 600px;
+}
+
+.story-text h2,
+.mission-section h2,
+.features-section h2,
+.about-cta h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #543b37;
+  margin-bottom: 25px;
+}
+
+.story-text p:not(.section-label) {
+  color: #625b57;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   MISSION
+========================= */
+
+.mission-section {
+  text-align: center;
+  padding: 90px 20%;
+  background: #eadcb0;
+}
+
+.mission-section h2 {
+  color: #6b2f16;
+}
+
+.mission-section > p:last-child {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5f5149;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+  padding: 90px 8%;
+  background: #f8f4ef;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(84, 59, 55, 0.08);
+}
+
+.feature-card h3 {
+  color: #6b2f16;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #625b57;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.about-cta {
+  text-align: center;
+  padding: 90px 20px;
+  background: #6b2f16;
+  color: white;
+}
+
+.about-cta h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.about-cta > p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cta-buttons a:first-child {
+  background: white;
+  color: #6b2f16;
+}
+
+.cta-buttons a:last-child {
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-buttons a:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .about-hero,
+  .story-section {
+    flex-direction: column;
+    padding: 60px 6%;
+  }
+
+  .about-hero {
+    text-align: center;
+  }
+
+  .about-hero h1 {
+    font-size: 3rem;
+  }
+
+  .about-hero-image img,
+  .story-image img {
+    max-width: 100%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-section {
+    padding: 70px 8%;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .about-hero {
+    padding: 50px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-hero-image img {
+    height: 350px;
+  }
+
+  .story-section {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .story-image img {
+    height: 320px;
+  }
+
+  .story-text h2,
+  .mission-section h2,
+  .features-section h2,
+  .about-cta h2 {
+    font-size: 2rem;
+  }
+
+  .mission-section {
+    padding: 60px 20px;
+  }
+
+  .features-section {
+    padding: 60px 20px;
+  }
+
+  .feature-card {
+    padding: 28px 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons a {
+    width: 200px;
+  }
+}
